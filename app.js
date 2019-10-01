@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const middleware = require('./middleware/Q1')
+const middlewareQ1 = require('./middleware/Q1')
+const middlewareQ2 = require('./middleware/Q2')
 
-app.use(middleware)
+
+app.use(middlewareQ1)
+app.use(middlewareQ2)
 
 // 列出全部 Todo
 app.get('/', (req, res) => {
